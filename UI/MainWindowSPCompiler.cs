@@ -174,7 +174,7 @@ namespace Spedit.UI
                             FileInfo destFile = new FileInfo(compiledFiles[i]);
                             if (destFile.Exists)
                             {
-                                string destinationFileName = ShortenScriptFileName(destFile.Name) + ".smx";
+                                string destinationFileName = ShortenScriptFileName(destFile.Name);
                                 string copyFileDestination = Path.Combine(c.CopyDirectory, destinationFileName);
                                 File.Copy(compiledFiles[i], copyFileDestination, true);
                                 stringOutput.AppendLine("Copied: " + compiledFiles[i]);
