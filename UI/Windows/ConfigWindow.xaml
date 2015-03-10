@@ -28,7 +28,7 @@
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,255,0,0" Text="Post-Build Commandline: " />
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,330,0,0" Text="Optimization Level: " />
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,360,0,0" Text="Verbose Level: " />
-        <CheckBox Name="C_DeleteAfterCopy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,330,0,0" Content="Delete old .smx after copy" Checked="C_DeleteAfterCopy_Changed" Unchecked="C_DeleteAfterCopy_Changed" />
+        <CheckBox Name="C_DeleteAfterCopy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,330,0,0" Content="Delete old .smx after copy" Checked="C_DeleteAfterCopy_Changed" Unchecked="C_DeleteAfterCopy_Changed" IsChecked="True" />
         <TextBox Name="C_Name" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="350,25,5,0" TextChanged="C_Name_TextChanged" />
         <TextBox Name="C_SMDir" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="350,55,5,0" TextChanged="C_SMDir_TextChanged" />
         <TextBox Name="C_CopyDir" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="350,85,5,0" TextChanged="C_CopyDir_TextChanged" />
