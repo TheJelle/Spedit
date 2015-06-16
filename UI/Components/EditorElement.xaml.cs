@@ -333,11 +333,21 @@ namespace Spedit.UI.Components
                 {
                     fileWatcher.EnableRaisingEvents = false;
                 }
-                using (FileStream fs = new FileStream(_FullFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
+
+                try
                 {
-                    editor.Save((Stream)fs);
+                    using (FileStream fs = new FileStream(_FullFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        editor.Save((Stream)fs);
+                    }
+
+                    NeedsSave = false;
                 }
-                NeedsSave = false;
+                catch (IOException)
+                {
+                    System.Windows.MessageBox.Show("Error while saving file: " + _FullFilePath);
+                }
+                
                 if (fileWatcher != null)
                 {
                     fileWatcher.EnableRaisingEvents = true;
