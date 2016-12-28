@@ -187,6 +187,8 @@
 		<fontfamily>Schriftart</fontfamily>
 		<syntaxhigh>Syntaxhighlighting</syntaxhigh>
 		<highdeprecat>Veraltete Syntax (&lt;1.7) anzeigen</highdeprecat>
+		<compile>Kompillieren</compile>
+		<autosavemin>Automatisches speichern (Min)</autosavemin>
 	</de>
 	<fr>
 		<language>Français</language>
@@ -376,9 +378,202 @@
 		<fontfamily>Police</fontfamily>
 		<syntaxhigh>Mise en évidence de la syntax</syntaxhigh>
 		<highdeprecat>Mise en évidence de la syntax (&lt;1.7) obsolète</highdeprecat>
+		<compile>Compiler</compile>
+		<autosavemin>Sauvegarde automatique (min)</autosavemin>
 	</fr>
+	<sv>
+		<language>Svenska</language>
+		<serverrunning>Server körs</serverrunning>
+		<saving>Sparar</saving>
+		<saveufiles>Spara alla osparade filer?</saveufiles>
+		<compileall>Kompilera allt</compileall>
+		<compilecurr>Sammanställ nuvarande</compilecurr>
+		<copy>Kopiera</copy>
+		<ftpup>FTP uppladdning</ftpup>
+		<startserver>Starta server</startserver>
+		<replace>Byt ut</replace>
+		<replaceall>Byt ut allt</replaceall>
+		<opennewfile>Öppna ny fil</opennewfile>
+		<nofilopened>Ingen fil öppnades</nofilopened>
+		<nofileopenedcap>Ingen av de valda filerna kunde öppnas</nofileopenedcap>
+		<savefileas>Spara fil som</savefileas>
+		<savefollow>Spara följande filer som</savefollow>
+		<chdecomp>Välj plugin att dekompilera</chdecomp>
+		<decompiling>Dekompilera</decompiling>
+		<editconfig>Redigera konfigurationer</editconfig>
+		<foundinoff>Hittad i {0} med längden {1}</foundinoff>
+		<foundnothing>Hittade inget</foundnothing>
+		<replacedoff>Bytte ut motvikt</replacedoff>
+		<replacedocc>Bytte {0} förekomster i {1} dokument</replacedocc>
+		<occfound>Förekomster hittade</occfound>
+		<emptypatt>Tomt sök mönster</emptypatt>
+		<novalidregex>Inget giltigt regex mönster</novalidregex>
+		<failedcheck>Misslyckades att kolla</failedcheck>
+		<errorupdate>Fel vid sök av uppdateringar</errorupdate>
+		<versuptodate>Versionen är uppdaterad</versuptodate>
+		<versionyour>Ditt programs version {0} är uppdaterad</versionyour>
+		<details>Detaljer</details>
+		<compiling>Kompilerar</compiling>
+		<error>Fel</error>
+		<spcompnotstarted>Filen spcomp.exe startades inte korrekt</spcompnotstarted>
+		<spcompnotfound>Filen spcomp.exe hittades inte</spcompnotfound>
+		<copied>Kopierad</copied>
+		<deleted>Borttagen</deleted>
+		<failcopy>Misslyckades att kopiera</failcopy>
+		<nofilescopy>Inga filer kopierades</nofilescopy>
+		<uploaded>Uppladdad</uploaded>
+		<erroruploadfile>Fel vid uppladdning av fil: {0} to {1}</erroruploadfile>
+		<errorupload>Fel vid uppladning av filer</errorupload>
+		<done>Klar</done>
+		<file>Fil</file>
+		<new>Ny</new>
+		<open>Öppna</open>
+		<save>Spara</save>
+		<saveall>Spara alla</saveall>
+		<saveas>Spara som</saveas>
+		<close>Stäng</close>
+		<closeall>Stäng alla</closeall>
+		<build>Bygga</build>
+		<copyplugin>Kopiera plugins</copyplugin>
+		<sendrcon>Skicka RCon kommandon</sendrcon>
+		<config>Konfiguration</config>
+		<edit>Redigera</edit>
+		<undo>Ångra</undo>
+		<redo>Gör om</redo>
+		<cut>Klipp ut</cut>
+		<paste>Klistra in</paste>
+		<folding>Vikningar</folding>
+		<expandall>Utöka alla</expandall>
+		<collapseall>Fäll ihop alla</collapseall>
+		<jumpto>Hoppa till</jumpto>
+		<togglcomment>Sätt på kommentarer</togglcomment>
+		<selectall>Välj alla</selectall>
+		<findreplace>Hitta &amp; Byt ut</findreplace>
+		<tools>Verktyg</tools>
+		<options>Inställningar</options>
+		<parsedincdir>Kopierad från include mapp</parsedincdir>
+		<oldapiweb>Gammal API hemsida</oldapiweb>
+		<newapiweb>Ny API hemsida</newapiweb>
+		<reformatter>Syntax omgörare</reformatter>
+		<reformatcurr>Omgör nuvarande</reformatcurr>
+		<reformatall>Omgör allt</reformatall>
+		<decompile>Dekompilera</decompile>
+		<reportbuggit>Rapportera en bug på GitHub</reportbuggit>
+		<checkupdates>Sök uppdateringar</checkupdates>
+		<about>Om</about>
+		<filename>Filnamn</filename>
+		<line>Linje</line>
+		<type>Typ</type>
+		<normalsearch>Normal sökning</normalsearch>
+		<matchwhowords>Matcha hela ord</matchwhowords>
+		<advancsearch>Avancerad sökning</advancsearch>
+		<regexsearch>Regex sökning</regexsearch>
+		<currdoc>Nuvarande dokument</currdoc>
+		<alldoc>Alla öppnade dokument</alldoc>
+		<find>Hitta</find>
+		<count>Räkna</count>
+		<casesen>Skiftlägeskänsliga</casesen>
+		<multilineregex>Multilinje regex</multilineregex>
+		<errorfileloadproc>Fel vid laddning och bearbetning av fil</errorfileloadproc>
+		<notdissmethod>Kunde inte plocka isär metod {0}: {1}</notdissmethod>
+		<dfilechanged>{0} har ändrats</dfilechanged>
+		<filechanged>Fil ändrad</filechanged>
+		<filetryreload>Testa ladda om filer?</filetryreload>
+		<dsaveerror>Ett fel uppstod när du sparade</dsaveerror>
+		<saveerror>Spara fel</saveerror>
+		<savingfile>Sparar fil</savingfile>
+		<ptabb>pt</ptabb>
+		<colabb>Col</colabb>
+		<lnabb>Ln</lnabb>
+		<lenabb>Len</lenabb>
+		<speditcap>Ett lätt Sourcepawn program</speditcap>
+		<writtenby>Gjord av: {0}</writtenby>
+		<license>Licens</license>
+		<peopleinv>Medverkande</peopleinv>
+		<preview>Förhandsvisning</preview>
+		<newfile>Ny fil</newfile>
+		<configwrongpars>Din config kunde inte kopiera en sourcepawn definition</configwrongpars>
+		<noname>Inget namn</noname>
+		<poslen>pos: {0} - len: {1}</poslen>
+		<inheritedfr>Ärvt av</inheritedfr>
+		<methodfrom>Method från</methodfrom>
+		<propertyfrom>Property från</propertyfrom>
+		<search>Sök</search>
+		<delete>Ta bort</delete>
+		<name>Namn</name>
+		<scriptdir>Scripting mappar</scriptdir>
+		<delimitedwi>Avgränsa med</delimitedwi>
+		<copydir>Kopiera mapp</copydir>
+		<serverexe>Server körbar</serverexe>
+		<serverstartargs>Server-start argument</serverstartargs>
+		<prebuildcom>Förbyggd kommandolinje</prebuildcom>
+		<postbuildcom>Efterbyggd kommandolinje</postbuildcom>
+		<optimizelvl>Optimeringsnivå</optimizelvl>
+		<verboselvl>Utförligsnivå</verboselvl>
+		<autocopy>Automatisk kopering efter kompilering</autocopy>
+		<deleteoldsmx>Ta bort old .smx efter kopiering</deleteoldsmx>
+		<ftphost>FTP värd</ftphost>
+		<ftpuser>FTP användare</ftpuser>
+		<ftppw>FTP lösenord</ftppw>
+		<ftpdir>FTP mapp</ftpdir>
+		<comeditordir>Mapp av SPEdit</comeditordir>
+		<comscriptdir>Mapp av kompilering script</comscriptdir>
+		<comcopydir>Mapp vars smx borde bli kopierad</comcopydir>
+		<comscriptfile>Map och namn av script</comscriptfile>
+		<comscriptname>Filnamn av script</comscriptname>
+		<compluginfile>Map och namn av kompilerad script</compluginfile>
+		<compluginname>Filnamn av kompilerad script</compluginname>
+		<rconengine>RCON server motor</rconengine>
+		<rconip>RCON server IP</rconip>
+		<rconport>RCON server port</rconport>
+		<rconpw>RCON server lösenord</rconpw>
+		<rconcom>RCON Server kommandon</rconcom>
+		<compluginsreload>Laddar om alla kompilerade plugins</compluginsreload>
+		<compluginsloas>Laddar alla kompilerade plugins</compluginsloas>
+		<compluginsunload>Oladdar alla kompilerade plugins</compluginsunload>
+		<newconfig>Ny config</newconfig>
+		<cannotdelconf>Kan inte ta bort config</cannotdelconf>
+		<ycannotdelconf>Du kan inte ta bort den här configen!</ycannotdelconf>
+		<selectexe>Välj körbar</selectexe>
+		<cmdlinecom>Kommandolinje variabler</cmdlinecom>
+		<rconcmdlinecom>RCON kommandolinje variabler</rconcmdlinecom>
+		<resetoptions>Återställ inställningar</resetoptions>
+		<resetoptques>Är du säker på att återställa dina inställningar?</resetoptques>
+		<restarteditor>Starta om program</restarteditor>
+		<yrestarteditor>Du måste starta om programmet för att förändringarna ska slutföras</yrestarteditor>
+		<restartedifulleff>Starta om program för förändringarna...</restartedifulleff>
+		<restartedieff>Starta om program för att förändringarna ska slutföras...</restartedieff>
+		<program>Program</program>
+		<hardwareacc>Använd hårdvarans acceleration (om tillgängligt)</hardwareacc>
+		<uianim>UI animeringar</uianim>
+		<openinc>Automatisk öppning av includes</openinc>
+		<openincrec>Öppna includes försiktigt</openincrec>
+		<autoupdate>Sök automatiskt för uppdateringar</autoupdate>
+		<showtoolbar>Visa verktygsfält</showtoolbar>
+		<dynamicisac>Dynamiskt slutförande</dynamicisac>
+		<darktheme>Mörkt tema</darktheme>
+		<themecolor>Färgtema</themecolor>
+		<languagestr>Språk</languagestr>
+		<editor>Program</editor>
+		<fontsize>Font storlek</fontsize>
+		<scrollspeed>Scroll hastighet</scrollspeed>
+		<wordwrap>Ord wrap</wordwrap>
+		<aggindentation>Aggressivt indrag</aggindentation>
+		<reformataftersem>Omformatterar linje efter semikolon</reformataftersem>
+		<tabstospace>Byt ut flikar med utrymme</tabstospace>
+		<autoclosebrack>Automatiskt stängande parantes</autoclosebrack>
+		<autoclosestrchr>Automatiskt stängande sträng, chars</autoclosestrchr>
+		<showsapaces>Visa utrymme</showsapaces>
+		<showtabs>Visa flikar</showtabs>
+		<indentationsize>Inbuktning storlek</indentationsize>
+		<fontfamily>Font</fontfamily>
+		<syntaxhigh>Syntax markering</syntaxhigh>
+		<highdeprecat>Markera föråldrat (&lt;1.7) syntax</highdeprecat>
+		<compile>Kompilera</compile>
+		<autosavemin>Auto spara (min)</autosavemin>
+	</sv>
 	<ru>
-		<language>Russian</language>
+		<language>Русский</language>
 		<serverrunning>Сервер запущен</serverrunning>
 		<saving>Сохранение</saving>
 		<saveufiles>Сохранить все несохранённые файлы?</saveufiles>
@@ -565,5 +760,7 @@
 		<fontfamily>Шрифт</fontfamily>
 		<syntaxhigh>Подсветка синтаксиса</syntaxhigh>
 		<highdeprecat>Подсветка устаревшего (&lt;1.7) синтаксиса</highdeprecat>
+		<compile>Компиляция</compile>
+		<autosavemin>Aвтосохранение (мин)</autosavemin>
 	</ru>
 </translations>
