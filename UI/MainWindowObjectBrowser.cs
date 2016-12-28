@@ -46,7 +46,7 @@ namespace Spedit.UI
 		{
 			DirectoryInfo currentInfo = new DirectoryInfo(CurrentObjectBrowserDirectory);
 			DirectoryInfo parentInfo = currentInfo.Parent;
-			if (parentInfo.Exists)
+			if (parentInfo != null && parentInfo.Exists)
 			{
 				ChangeObjectBrowserToDirectory(parentInfo.FullName);
 			}
