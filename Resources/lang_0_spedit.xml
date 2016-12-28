@@ -377,4 +377,193 @@
 		<syntaxhigh>Mise en évidence de la syntax</syntaxhigh>
 		<highdeprecat>Mise en évidence de la syntax (&lt;1.7) obsolète</highdeprecat>
 	</fr>
+	<ru>
+		<language>Russian</language>
+		<serverrunning>Сервер запущен</serverrunning>
+		<saving>Сохранение</saving>
+		<saveufiles>Сохранить все несохранённые файлы?</saveufiles>
+		<compileall>Скомпилировать всё</compileall>
+		<compilecurr>Скомпилировать текущий файл</compilecurr>
+		<copy>Копировать</copy>
+		<ftpup>Загрузка через FTP</ftpup>
+		<startserver>Запустить сервер</startserver>
+		<replace>Заменить</replace>
+		<replaceall>Заменить всё</replaceall>
+		<opennewfile>Открыть новый файл</opennewfile>
+		<nofilopened>Открытых файлов нет</nofilopened>
+		<nofileopenedcap>Ни один из выбраных файлов не может быть открыт.</nofileopenedcap>
+		<savefileas>Сохранить как...</savefileas>
+		<savefollow>Сохранить следующие файлы</savefollow>
+		<chdecomp>Выбрать плагин для декомпилирования</chdecomp>
+		<decompiling>Декомпилирование</decompiling>
+		<editconfig>Редактировать конфиги</editconfig>
+		<foundinoff>Найдено в смещении {0} размером {1}</foundinoff>
+		<foundnothing>Ничего не найдено</foundnothing>
+		<replacedoff>Заменено в смещении</replacedoff>
+		<replacedocc>Произведено {0} замен в документе {1}</replacedocc>
+		<occfound>совпадений найдено</occfound>
+		<emptypatt>Поисковый шаблон пуст</emptypatt>
+		<novalidregex>Неправильный шаблон</novalidregex>
+		<failedcheck>Не удалось проверить</failedcheck>
+		<errorupdate>Ошибка проверки обновлений</errorupdate>
+		<versuptodate>Обновление не требуется</versuptodate>
+		<versionyour>Ваша версия {0} программы - самая свежая.</versionyour>
+		<details>Подробности</details>
+		<compiling>Компилирование</compiling>
+		<error>Ошибка</error>
+		<spcompnotstarted>Компилятор spcomp.exe не был корректно запущен.</spcompnotstarted>
+		<spcompnotfound>Файл компилятора spcomp.exe не найден.</spcompnotfound>
+		<copied>Скопировано</copied>
+		<deleted>Удалено</deleted>
+		<failcopy>Не удалось скопировать</failcopy>
+		<nofilescopy>Файлы не были скопированы</nofilescopy>
+		<uploaded>Загружено</uploaded>
+		<erroruploadfile>Ошибка при загрузке файла: {0} в {1}</erroruploadfile>
+		<errorupload>Ошибка при загрузке файлов</errorupload>
+		<done>готово</done>
+		<file>Файл</file>
+		<new>Новый</new>
+		<open>Открыть</open>
+		<save>Сохранить</save>
+		<saveall>Сохранить всё</saveall>
+		<saveas>Сохранить как...</saveas>
+		<close>Закрыть</close>
+		<closeall>Закрыть всё</closeall>
+		<build>Сборка</build>
+		<copyplugin>Скопировать плагины</copyplugin>
+		<sendrcon>Отправить RCon команду</sendrcon>
+		<config>Конфиги</config>
+		<edit>Редактировать</edit>
+		<undo>Отмена</undo>
+		<redo>Повтор</redo>
+		<cut>Вырезать</cut>
+		<paste>Вставить</paste>
+		<folding>Блоки</folding>
+		<expandall>Развернуть все</expandall>
+		<collapseall>Свернуть все</collapseall>
+		<jumpto>Перейти к</jumpto>
+		<togglcomment>Раз-/Закомментировать</togglcomment>
+		<selectall>Выбрать всё</selectall>
+		<findreplace>Поиск и замена</findreplace>
+		<tools>Инструменты</tools>
+		<options>Настройки программы</options>
+		<parsedincdir>Установленный на ПК</parsedincdir>
+		<oldapiweb>Страница старого API</oldapiweb>
+		<newapiweb>Страница нового API</newapiweb>
+		<reformatter>Переформатирование синтаксиса</reformatter>
+		<reformatcurr>Переформатировать текущий</reformatcurr>
+		<reformatall>Переформатировать все</reformatall>
+		<decompile>Декомпилировать</decompile>
+		<reportbuggit>Отправить на GitHub сообщение об ошибке</reportbuggit>
+		<checkupdates>Проверить наличие обновлений</checkupdates>
+		<about>О программе</about>
+		<filename>Имя файла</filename>
+		<line>Строка</line>
+		<type>Тип</type>
+		<normalsearch>Нормальный поиск</normalsearch>
+		<matchwhowords>Совпадение всех слов</matchwhowords>
+		<advancsearch>Расширенный поиск</advancsearch>
+		<regexsearch>Регулярные выражения</regexsearch>
+		<currdoc>Текущий документ</currdoc>
+		<alldoc>Все открытые документы</alldoc>
+		<find>Найти</find>
+		<count>Считать</count>
+		<casesen>Учитывать регистр</casesen>
+		<multilineregex>Многострочная регулярка</multilineregex>
+		<errorfileloadproc>Ошибка при загрузке и обработке файла.</errorfileloadproc>
+		<notdissmethod>Не удалось разобрать метод {0}: {1}</notdissmethod>
+		<dfilechanged>{0} был изменён.</dfilechanged>
+		<filechanged>Файл изменён</filechanged>
+		<filetryreload>Перезагрузить файл?</filetryreload>
+		<dsaveerror>Ошибка при сохранении.</dsaveerror>
+		<saveerror>Ошибка сохранения</saveerror>
+		<savingfile>Сохранение файлов</savingfile>
+		<ptabb>пункт</ptabb>
+		<colabb>Столбец</colabb>
+		<lnabb>Строка</lnabb>
+		<lenabb>Длина</lenabb>
+		<speditcap>легкий редактор SourcePawn</speditcap>
+		<writtenby>Автор: {0}</writtenby>
+		<license>Лицензия</license>
+		<peopleinv>Помогали:</peopleinv>
+		<preview>Предпросмотр</preview>
+		<newfile>Новый файл</newfile>
+		<configwrongpars>Конфиг не смог прочесть определения SourcePawn.</configwrongpars>
+		<noname>без имени</noname>
+		<poslen>поз: {0} - длн: {1}</poslen>
+		<inheritedfr>унаследовано от</inheritedfr>
+		<methodfrom>Method из</methodfrom>
+		<propertyfrom>Property из</propertyfrom>
+		<search>поиск</search>
+		<delete>Удалить</delete>
+		<name>Имя</name>
+		<scriptdir>Папки скриптов</scriptdir>
+		<delimitedwi>Разделять</delimitedwi>
+		<copydir>Копировать папку</copydir>
+		<serverexe>Исполняемый файл сервера</serverexe>
+		<serverstartargs>Аргументы запуска сервера</serverstartargs>
+		<prebuildcom>Pre-Build командная строка</prebuildcom>
+		<postbuildcom>Post-Build командная строка</postbuildcom>
+		<optimizelvl>Оптимизация</optimizelvl>
+		<verboselvl>Уровень оптимизации</verboselvl>
+		<autocopy>Скопировать после компиляции</autocopy>
+		<deleteoldsmx>Удалить старый .smx после копирования</deleteoldsmx>
+		<ftphost>Хост FTP</ftphost>
+		<ftpuser>Пользователь FTP</ftpuser>
+		<ftppw>Пароль FTP</ftppw>
+		<ftpdir>Папка FTP</ftpdir>
+		<comeditordir>Расположение исполняемого файла SPEdit</comeditordir>
+		<comscriptdir>Расположение компилируемых скриптов</comscriptdir>
+		<comcopydir>Место для хранения копируемых smx</comcopydir>
+		<comscriptfile>Full Directory and Name of the script</comscriptfile>
+		<comscriptname>Имя файла скрипта</comscriptname>
+		<compluginfile>Full Directory and Name of the compiled script</compluginfile>
+		<compluginname>Имя скомпилированного скрипта</compluginname>
+		<rconengine>Движок RCon сервера</rconengine>
+		<rconip>IP адрес RCon сервера</rconip>
+		<rconport>Порт RCon сервера</rconport>
+		<rconpw>Пароль RCon сервера</rconpw>
+		<rconcom>Команды RCon сервера</rconcom>
+		<compluginsreload>Перезапустить все скомпилированные плагины</compluginsreload>
+		<compluginsloas>Запустить все скомпилированные плагины</compluginsloas>
+		<compluginsunload>Выгрузить все скомпилированные плагины</compluginsunload>
+		<newconfig>Новый конфиг</newconfig>
+		<cannotdelconf>Нельзя удалить конфиг</cannotdelconf>
+		<ycannotdelconf>Вы не можете удалить этот конфиг!</ycannotdelconf>
+		<selectexe>Выберите исполняемый файл</selectexe>
+		<cmdlinecom>Переменные командной строки</cmdlinecom>
+		<rconcmdlinecom>Переменные командной строки Rcon</rconcmdlinecom>
+		<resetoptions>Сброс опций</resetoptions>
+		<resetoptques>Вы уверены, что хотите произвести сброс опций?</resetoptques>
+		<restarteditor>Перезапустить редактор</restarteditor>
+		<yrestarteditor>Вы должны перезапустить редактор для применения изменений.</yrestarteditor>
+		<restartedifulleff>Перезапуск редактора для полного эффекта...</restartedifulleff>
+		<restartedieff>Перезапуск редактора для полного эффекта...</restartedieff>
+		<program>Программа</program>
+		<hardwareacc>Использовать аппаратное ускорение (если возможно)</hardwareacc>
+		<uianim>Анимация интерфейса</uianim>
+		<openinc>Автоматическое использование инклюдов</openinc>
+		<openincrec>Открывать инклюды рекурсивно</openincrec>
+		<autoupdate>Автоматический поиск обновлений</autoupdate>
+		<showtoolbar>Отобразить панель инструментов</showtoolbar>
+		<dynamicisac>Динамическое автодополнение</dynamicisac>
+		<darktheme>Тёмная тема</darktheme>
+		<themecolor>Цвет темы</themecolor>
+		<languagestr>Язык</languagestr>
+		<editor>Редактор</editor>
+		<fontsize>Размер шрифтов</fontsize>
+		<scrollspeed>Скорость прокрутки</scrollspeed>
+		<wordwrap>Перенос слов</wordwrap>
+		<aggindentation>Агрессивный отступ</aggindentation>
+		<reformataftersem>Переформатирование строки после точки с запятой</reformataftersem>
+		<tabstospace>Заменить табуляцию пробелами</tabstospace>
+		<autoclosebrack>Автозакрытие скобок</autoclosebrack>
+		<autoclosestrchr>Автозакрытие кавычек для типов String, Char</autoclosestrchr>
+		<showsapaces>Отображать пробелы</showsapaces>
+		<showtabs>Отображать табуляцию</showtabs>
+		<indentationsize>Размер отступа</indentationsize>
+		<fontfamily>Шрифт</fontfamily>
+		<syntaxhigh>Подсветка синтаксиса</syntaxhigh>
+		<highdeprecat>Подсветка устаревшего (&lt;1.7) синтаксиса</highdeprecat>
+	</ru>
 </translations>
