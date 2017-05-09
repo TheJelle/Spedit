@@ -638,10 +638,6 @@
     <Resource Include="Resources\iconmonstr-code-fork-2-20.png" />
     <Resource Include="Resources\iconmonstr-code-fork-4-20.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\lang_0_spedit.xml" />
-    <Content Include="Resources\lang_0_spedit_entryTemplate.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
