@@ -120,8 +120,6 @@ namespace SourcepawnCondenser
 	            if (testChar == ':' || testChar == '[' || testChar == ']')
 	                continue;
 	            return -1;
-
-	            return -1;
 	        }
 	        if (string.IsNullOrEmpty(functionName))
 	            return -1;
