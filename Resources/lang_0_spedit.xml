@@ -1,4 +1,195 @@
 ﻿<translations>
+	<zhCN>
+		<language>简体中文</language>
+		<serverrunning>服务器运行中</serverrunning>
+		<saving>保存中</saving>
+		<saveufiles>是否保存所有文件?</saveufiles>
+		<compileall>全部编译</compileall>
+		<compilecurr>编译当前文件</compilecurr>
+		<copy>复制</copy>
+		<ftpup>FTP 上传</ftpup>
+		<startserver>启动服务器</startserver>
+		<replace>替换</replace>
+		<replaceall>全部替换</replaceall>
+		<opennewfile>打开文件</opennewfile>
+		<nofilopened>未能打开文件</nofilopened>
+		<nofileopenedcap>未能打开任何已选择的文件。</nofileopenedcap>
+		<savefileas>文件另存为</savefileas>
+		<savefollow>保存以下文件</savefollow>
+		<chdecomp>选择需要反编译的插件</chdecomp>
+		<decompiling>反编译中</decompiling>
+		<editconfig>编辑编译配置</editconfig>
+		<foundinoff param-0="position" param-1="length">位于 {0} 位置长度 {1} 的匹配项已找到</foundinoff>
+		<foundnothing>未找到匹配文本</foundnothing>
+		<replacedoff>已替换匹配项于位置</replacedoff>
+		<replacedocc param-0="position count" param-1="file count">已替换 {1} 个文档中的 {0} 个位置</replacedocc>
+		<occfound>个位置已找到</occfound>
+		<emptypatt>查询表达式为空</emptypatt>
+		<novalidregex>无效的正则表达式</novalidregex>
+		<failedcheck>检查版本更新失败</failedcheck>
+		<errorupdate>在检查程序更新时发生错误</errorupdate>
+		<versuptodate>最新版本</versuptodate>
+		<versionyour param-0="version">应用程序已是最新版本({0})</versionyour>
+		<details>说明</details>
+		<compiling>正在编译</compiling>
+		<error>发生错误</error>
+		<spcompnotstarted>spcomp.exe 编译器未能正常启动。</spcompnotstarted>
+		<spcompnotfound>未找到 spcomp.exe 编译器。</spcompnotfound>
+		<copied>已复制</copied>
+		<deleted>已删除</deleted>
+		<failcopy>复制失败</failcopy>
+		<nofilescopy>未复制任何文件</nofilescopy>
+		<uploaded>已上传</uploaded>
+		<erroruploadfile param-0="file name" param-1="file target dir">将文件 {0} 上传到 {1} 时出错。</erroruploadfile>
+		<errorupload>上传文件时发生错误</errorupload>
+		<done>操作完成</done>
+		<file>文件</file>
+		<new>新建</new>
+		<open>打开</open>
+		<save>保存</save>
+		<saveall>全部保存</saveall>
+		<saveas>另存为</saveas>
+		<close>关闭</close>
+		<closeall>关闭所有</closeall>
+		<build>生成</build>
+		<copyplugin>复制插件</copyplugin>
+		<sendrcon>发送 RCon 命令</sendrcon>
+		<config>配置</config>
+		<edit>编辑</edit>
+		<undo>撤销</undo>
+		<redo>重做</redo>
+		<cut>剪切</cut>
+		<paste>粘贴</paste>
+		<folding>折叠选项</folding>
+		<expandall>全部展开</expandall>
+		<collapseall>全部折叠</collapseall>
+		<jumpto>跳转到</jumpto>
+		<togglcomment>切换注释</togglcomment>
+		<selectall>全选</selectall>
+		<findreplace>查找和替换</findreplace>
+		<tools>工具</tools>
+		<options>选项</options>
+		<parsedincdir>从引用目录中转换</parsedincdir>
+		<oldapiweb>API帮助查询网站(旧版)</oldapiweb>
+		<newapiweb>API帮助查询网站(新版)</newapiweb>
+		<reformatter>语法格式器</reformatter>
+		<reformatcurr>设置选定内容的格式</reformatcurr>
+		<reformatall>设置文档格式</reformatall>
+		<decompile>反编译</decompile>
+		<reportbuggit>在GitHub上回报程序漏洞</reportbuggit>
+		<checkupdates>检查更新</checkupdates>
+		<about>关于</about>
+		<filename>文件</filename>
+		<line>行数</line>
+		<type>类型</type>
+		<normalsearch>普通模式</normalsearch>
+		<matchwhowords>整字匹配</matchwhowords>
+		<advancsearch>进阶模式</advancsearch>
+		<regexsearch>正则表达式</regexsearch>
+		<currdoc>当前文档</currdoc>
+		<alldoc>所有已打开文档</alldoc>
+		<find>查找</find>
+		<count>计数</count>
+		<casesen>大小写敏感</casesen>
+		<multilineregex>多行匹配(正则)</multilineregex>
+		<errorfileloadproc>加载处理文件时出错。</errorfileloadproc>
+		<notdissmethod param-0="name" param-1="ex message">无法分析反编译代码 {0}: {1}</notdissmethod>
+		<dfilechanged param-0="position">{0} 个位置已替换.</dfilechanged>
+		<filechanged>File changed</filechanged>
+		<filetryreload>尝试重新载入文件?</filetryreload>
+		<dsaveerror>保存时出现错误。</dsaveerror>
+		<saveerror>保存失败</saveerror>
+		<savingfile>文件保存中</savingfile>
+		<ptabb>磅</ptabb>
+		<colabb>列</colabb>
+		<lnabb>行</lnabb>
+		<lenabb>已选择</lenabb>
+		<speditcap>一个为 SourcePawn 而生的轻量级编辑器</speditcap>
+		<writtenby param-0="author">程序作者: {0}</writtenby>
+		<license>许可协议</license>
+		<peopleinv>程序协力</peopleinv>
+		<preview>预览</preview>
+		<newfile>新建文件</newfile>
+		<configwrongpars>当前编译配置的引用目录无法转换为 SourcePawn 的定义实现。</configwrongpars>
+		<noname>no name</noname>
+		<poslen param-0="position" param-1="length">位置: {0} - 长度: {1}</poslen>
+		<inheritedfr>继承自</inheritedfr>
+		<methodfrom>方法来源:</methodfrom>
+		<propertyfrom>属性来源:</propertyfrom>
+		<search>搜索</search>
+		<delete>删除</delete>
+		<name>配置名称</name>
+		<scriptdir>引用目录</scriptdir>
+		<delimitedwi>分隔符</delimitedwi>
+		<copydir>目标复制目录</copydir>
+		<serverexe>服务器可执行程序</serverexe>
+		<serverstartargs>服务器启动项</serverstartargs>
+		<prebuildcom>预生成命令行</prebuildcom>
+		<postbuildcom>后生成命令行</postbuildcom>
+		<optimizelvl>优化等级</optimizelvl>
+		<verboselvl>细节等级</verboselvl>
+		<autocopy>编译后复制到目标目录</autocopy>
+		<deleteoldsmx>删除已复制到目标目录的 .smx 文件</deleteoldsmx>
+		<ftphost>FTP 主机</ftphost>
+		<ftpuser>FTP 用户</ftpuser>
+		<ftppw>FTP 密码</ftppw>
+		<ftpdir>FTP 目录</ftpdir>
+		<comeditordir>SPEdit 的程序根目录</comeditordir>
+		<comscriptdir>脚本的编译目录</comscriptdir>
+		<comcopydir>.smx 文件的目标复制目录</comcopydir>
+		<comscriptfile>脚本文件所在的完整路径</comscriptfile>
+		<comscriptname>脚本文件的名称</comscriptname>
+		<compluginfile>脚本编译后所在的完整路径</compluginfile>
+		<compluginname>脚本编译后的文件名称</compluginname>
+		<rconengine>RCon 服务器引擎</rconengine>
+		<rconip>RCon 服务器地址</rconip>
+		<rconport>RCon 服务器端口</rconport>
+		<rconpw>RCon 服务器密码</rconpw>
+		<rconcom>RCon 服务器命令</rconcom>
+		<compluginsreload>重新载入所有已编译的插件</compluginsreload>
+		<compluginsloas>载入所有已编译的插件</compluginsloas>
+		<compluginsunload>卸载所有已编译的插件</compluginsunload>
+		<newconfig>新建编译配置</newconfig>
+		<cannotdelconf>无法删除编译配置</cannotdelconf>
+		<ycannotdelconf>你无法删除该编译配置(说白了就是无法删除预留)</ycannotdelconf>
+		<selectexe>选择启动程序</selectexe>
+		<cmdlinecom>命令行内置变量</cmdlinecom>
+		<rconcmdlinecom>RCon 内置变量</rconcmdlinecom>
+		<resetoptions>恢复默认设置</resetoptions>
+		<resetoptques>你确定要将当前设置恢复到默认状态吗?</resetoptques>
+		<restarteditor>重新启动</restarteditor>
+		<yrestarteditor>改动必须重启后才能生效。</yrestarteditor>
+		<restartedifulleff>重启以获得最佳效果</restartedifulleff>
+		<restartedieff>设置重启后生效</restartedieff>
+		<program>程序</program>
+		<hardwareacc>使用硬件加速(如果可用)</hardwareacc>
+		<uianim>UI 动画特效</uianim>
+		<openinc>自动打开引用</openinc>
+		<openincrec>打开引用实现</openincrec>
+		<autoupdate>自动检测更新</autoupdate>
+		<showtoolbar>显示工具栏</showtoolbar>
+		<dynamicisac>动态自动补全/智能提示</dynamicisac>
+		<darktheme>深色主题</darktheme>
+		<themecolor>主题配色</themecolor>
+		<languagestr>界面语言</languagestr>
+		<editor>编辑器</editor>
+		<fontsize>字体大小</fontsize>
+		<scrollspeed>滚动速度</scrollspeed>
+		<wordwrap>自动换行</wordwrap>
+		<aggindentation>换行自增缩进</aggindentation>
+		<reformataftersem>输入 ; 时自动设置当前行格式</reformataftersem>
+		<tabstospace>使用空格替换制表符</tabstospace>
+		<autoclosebrack>自动闭合括号</autoclosebrack>
+		<autoclosestrchr>自动闭合字符串及字符</autoclosestrchr>
+		<showsapaces>显示空格</showsapaces>
+		<showtabs>显示制表符</showtabs>
+		<indentationsize>缩进长度</indentationsize>
+		<fontfamily>字体</fontfamily>
+		<syntaxhigh>语法高亮</syntaxhigh>
+		<highdeprecat>高亮过时语法 (即版本低于 1.7)</highdeprecat>
+		<compile>编译</compile>
+		<autosavemin>自动保存(分钟)</autosavemin>
+	</zhCN>
 	<de>
 		<language>Deutsch</language>
 		<serverrunning>Server läuft</serverrunning>
