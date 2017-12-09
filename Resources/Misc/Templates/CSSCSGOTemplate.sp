@@ -1,4 +1,5 @@
 #pragma semicolon 1
+#pragma newdecls required
 
 #define DEBUG
 
@@ -9,8 +10,6 @@
 #include <sdktools>
 #include <cstrike>
 //#include <sdkhooks>
-
-#pragma newdecls required
 
 EngineVersion g_Game;
 
