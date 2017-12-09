@@ -1,4 +1,5 @@
 #pragma semicolon 1
+#pragma newdecls required
 
 #define DEBUG
 
@@ -7,8 +8,6 @@
 
 #include <sourcemod>
 #include <sdktools>
-
-#pragma newdecls required
 
 public Plugin myinfo = 
 {
