@@ -1,4 +1,5 @@
 #pragma semicolon 1
+#pragma newdecls required
 
 #define DEBUG
 
@@ -9,7 +10,6 @@
 #include <sdktools>
 #include <tf2>
 #include <tf2_stocks>
-//#include <sdkhooks>
 
 public Plugin myinfo = 
 {
