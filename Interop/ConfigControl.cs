@@ -40,10 +40,25 @@ namespace Spedit.Interop
                         foreach (string dir in SMDirectoriesSplitted)
                         {
                             string d = dir.Trim();
-                            if (Directory.Exists(d))
+                            if (d.Equals(""))
                             {
-                                SMDirs.Add(d);
+                                continue; // Skip unset directories to avoid duplicate "semicolon" in path
                             }
+
+                            // Allow relative paths that may not exist when the programs is started.
+                            // For many projects includes are required, mostly placed in the project/include folder.
+                            // Allowing just the entry "include" (relative path) as scripting directory should be fine.
+                            // The sourcemod compiler can handle folders that does not exist (no error is thrown)
+                            if (!Directory.Exists(d))
+                            {
+                                MessageBox.Show(
+                                    string.Format("The scripting directory '{0}' specified in the configuration does not exists globally."
+                                    + Environment.NewLine + "If this is an in-project folder, everything is fine. Other projects should ignore it.", d)
+                                        ,"Scripting directory may not available"
+                                        , MessageBoxButton.OK
+                                        , MessageBoxImage.Information);
+                            }
+                            SMDirs.Add(d);
                         }
                         string _Standard = ReadAttributeStringSafe(ref node, "Standard", "0");
                         bool IsStandardConfig = false;
