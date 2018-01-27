@@ -157,6 +157,7 @@ namespace Spedit.UI
                                     {
                                         ErrorResultGrid.Items.Add(new ErrorDataGridRow()
                                         {
+                                            compiledfileInfo = fileInfo,
                                             file = mc[j].Groups["file"].Value.Trim(),
                                             line = mc[j].Groups["line"].Value.Trim(),
                                             type = mc[j].Groups["type"].Value.Trim(),
@@ -440,6 +441,7 @@ namespace Spedit.UI
 
     public class ErrorDataGridRow
     {
+        public FileInfo compiledfileInfo { set; get; }
         public string file { set; get; }
         public string line { set; get; }
         public string type { set; get; }

@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using Xceed.Wpf.AvalonDock.Layout;
 using Spedit.Interop.Updater; //not delete!
+using System.Threading.Tasks;
 
 namespace Spedit.UI
 {
@@ -297,26 +298,83 @@ namespace Spedit.UI
             {
                 return;
             }
-            string fileName = row.file;
-            EditorElement[] editors = GetAllEditorElements();
-            if (editors == null)
+            string fileName = row.file.Replace(@"\\", @"\"); // Remove escape from slashes since we later want to compare the path
+
+            int line = GetLineInteger(row.line);
+            if(OpenTabWithMatchingName(fileName, line, true))
             {
                 return;
             }
+
+            // Not found in open editors, try to open the file
+            if (Path.IsPathRooted(fileName))
+            {
+                // Dealing with absolute path
+                TryLoadSourceFile(fileName, true, false, true);
+                OpenTabWithMatchingName(fileName, line);
+            }
+            else
+            {
+                // Dealing with relative path
+                // We need to know the project the related file lies in,
+                // so we try to load a file relative to the compiled files directory
+                string fileToOpen = (row.compiledfileInfo.DirectoryName + Path.DirectorySeparatorChar + fileName).Replace(@"/", @"\");
+                Console.WriteLine("File to open: " + fileToOpen);
+                if (File.Exists(fileToOpen))
+                {
+                    TryLoadSourceFile(fileToOpen, true, false, true);
+                    OpenTabWithMatchingName(fileToOpen, line);
+                }
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Await.Warning", "CS4014:Await.Warning")]
+        private bool OpenTabWithMatchingName(string fileName, int lineToSelect, bool directSelect = false)
+        {
+            EditorElement[] editors = GetAllEditorElements();
+            if (editors == null)
+            {
+                return false;
+            }
+
             for (int i = 0; i < editors.Length; ++i)
             {
+                Console.WriteLine(editors[i].FullFilePath);
                 if (editors[i].FullFilePath == fileName)
                 {
                     ((LayoutDocument)editors[i].Parent).IsSelected = true;
-                    int line = GetLineInteger(row.line);
-                    if (line > 0 && line <= editors[i].editor.LineCount)
+                    if (lineToSelect > 0 && lineToSelect <= editors[i].editor.LineCount)
                     {
-                        var lineObj = editors[i].editor.Document.Lines[line - 1];
-                        editors[i].editor.ScrollToLine(line - 1);
-                        editors[i].editor.Select(lineObj.Offset, lineObj.Length);
+                        if (directSelect)
+                        {
+                            SelectLineInEditor(editors[i], lineToSelect);
+                        }
+                        else
+                        {
+                            DelaySelectLineInEditor(editors[i], lineToSelect);
+                        }
                     }
+                    return true;
                 }
             }
+            return false;
+        }
+
+        // RAYs3T: Not happy with that solution, but if you directly try to select the line,
+        // after the editor was open, the select and jump-to is ignored? (Loading not finished?).
+        // So this work-a-round just waits in the background and then selects the line.
+        // I'm open for any better solution
+        private async Task DelaySelectLineInEditor(EditorElement editor, int lineToSelect)
+        {
+            await Task.Delay(250);
+            SelectLineInEditor(editor, lineToSelect);
+        }
+
+        private static void SelectLineInEditor(EditorElement editor, int line)
+        {
+            var lineObj = editor.editor.Document.Lines[line - 1];
+            editor.editor.ScrollToLine(line - 1);
+            editor.editor.Select(lineObj.Offset, lineObj.Length);
         }
 
         private void CloseErrorResultGrid(object sender, RoutedEventArgs e)
