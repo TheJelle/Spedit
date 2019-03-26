@@ -244,12 +244,12 @@ namespace Spedit.UI
             {
                 if (status.GotException)
                 {
-                    this.ShowMessageAsync(Program.Translations.FailedCheck, Program.Translations.ErrorUpdate + Environment.NewLine + $"{Program.Translations.Details}: " + status.ExceptionMessage
+                    this.ShowMessageAsync(Program.Translations.GetLanguage("FailedCheck"), Program.Translations.GetLanguage("ErrorUpdate") + Environment.NewLine + $"{Program.Translations.GetLanguage("Details")}: " + status.ExceptionMessage
                         , MessageDialogStyle.Affirmative, this.MetroDialogOptions);
                 }
                 else
                 {
-                    this.ShowMessageAsync(Program.Translations.VersUpToDate, string.Format(Program.Translations.VersionYour, Assembly.GetEntryAssembly().GetName().Version.ToString())
+                    this.ShowMessageAsync(Program.Translations.GetLanguage("VersUpToDate"), string.Format(Program.Translations.GetLanguage("VersionYour"), Assembly.GetEntryAssembly().GetName().Version.ToString())
                         , MessageDialogStyle.Affirmative, this.MetroDialogOptions);
                 }
             }

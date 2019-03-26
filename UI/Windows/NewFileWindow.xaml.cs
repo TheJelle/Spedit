@@ -86,8 +86,8 @@ namespace Spedit.UI.Windows
 			{
 				return;
 			}
-			PreviewBlock.Text = $"{Program.Translations.Preview}:";
-			SaveButton.Content = Program.Translations.Save;
+			PreviewBlock.Text = $"{Program.Translations.GetLanguage("Preview")}:";
+			SaveButton.Content = Program.Translations.GetLanguage("Save");
 		}
 
         private ICommand textBoxButtonFileCmd;
@@ -112,7 +112,7 @@ namespace Spedit.UI.Windows
                             dialog.AddExtension = true;
                             dialog.Filter = "Sourcepawn Files (*.sp *.inc)|*.sp;*.inc|All Files (*.*)|*.*";
                             dialog.OverwritePrompt = true;
-                            dialog.Title = Program.Translations.NewFile;
+                            dialog.Title = Program.Translations.GetLanguage("NewFile");
                             var result = dialog.ShowDialog();
                             if (result.Value)
                             {

@@ -58,7 +58,7 @@ namespace Spedit.UI.Components
             }
             catch (Exception e)
             {
-                detailbox_.Text = Program.Translations.ErrorFileLoadProc + Environment.NewLine + Environment.NewLine + $"{Program.Translations.Details}: " + e.Message;
+                detailbox_.Text = Program.Translations.GetLanguage("ErrorFileLoadProc") + Environment.NewLine + Environment.NewLine + $"{Program.Translations.GetLanguage("Details")}: " + e.Message;
                 return;
             }
             renderFile();
@@ -280,7 +280,7 @@ namespace Spedit.UI.Components
             }
             catch (Exception e)
             {
-                addDetailLine(Program.Translations.NotDissMethod, name, e.Message);
+                addDetailLine(Program.Translations.GetLanguage("NotDissMethod"), name, e.Message);
                 endDetailUpdate();
                 return;
             }

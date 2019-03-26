@@ -82,7 +82,7 @@ namespace Spedit.UI
                 if (compileCount > 0)
                 {
                     ErrorResultGrid.Items.Clear();
-                    var progressTask = await this.ShowProgressAsync(Program.Translations.Compiling, "", false, this.MetroDialogOptions);
+                    var progressTask = await this.ShowProgressAsync(Program.Translations.GetLanguage("Compiling"), "", false, this.MetroDialogOptions);
                     progressTask.SetProgress(0.0);
                     StringBuilder stringOutput = new StringBuilder();
                     Regex errorFilterRegex = new Regex(@"^(?<file>.+?)\((?<line>[0-9]+(\s*--\s*[0-9]+)?)\)\s*:\s*(?<type>[a-zA-Z]+\s+([a-zA-Z]+\s+)?[0-9]+)\s*:(?<details>.+)", RegexOptions.Compiled | RegexOptions.ExplicitCapture | RegexOptions.Multiline);
@@ -145,7 +145,7 @@ namespace Spedit.UI
                                 if (!InCompiling) //cannot await in catch
                                 {
                                     await progressTask.CloseAsync();
-                                    await this.ShowMessageAsync(Program.Translations.SPCompNotStarted, Program.Translations.Error, MessageDialogStyle.Affirmative, this.MetroDialogOptions);
+                                    await this.ShowMessageAsync(Program.Translations.GetLanguage("SPCompNotStarted"), Program.Translations.GetLanguage("Error"), MessageDialogStyle.Affirmative, this.MetroDialogOptions);
 									return;
                                 }
                                 if (File.Exists(errorFile))
@@ -163,16 +163,9 @@ namespace Spedit.UI
                                             details = mc[j].Groups["details"].Value.Trim()
                                         });
                                     }
-                                    try
-                                    {
-                                        File.Delete(errorFile);
-                                    }
-                                    catch (Exception)
-                                    {
-                                        stringOutput.AppendLine(Program.Translations.CompileErroFileError);
-                                    }
+                                    File.Delete(errorFile);
                                 }
-                                stringOutput.AppendLine(Program.Translations.Done);
+                                stringOutput.AppendLine(Program.Translations.GetLanguage("Done"));
                                 if (File.Exists(outFile))
                                 {
                                     compiledFiles.Add(outFile);
@@ -208,7 +201,7 @@ namespace Spedit.UI
             }
             else
             {
-                await this.ShowMessageAsync(Program.Translations.Error, Program.Translations.SPCompNotFound, MessageDialogStyle.Affirmative, this.MetroDialogOptions);
+                await this.ShowMessageAsync(Program.Translations.GetLanguage("Error"), Program.Translations.GetLanguage("SPCompNotFound"), MessageDialogStyle.Affirmative, this.MetroDialogOptions);
             }
             InCompiling = false;
         }
@@ -234,23 +227,23 @@ namespace Spedit.UI
                                 string copyFileDestination = Path.Combine(c.CopyDirectory, destinationFileName);
                                 File.Copy(compiledFiles[i], copyFileDestination, true);
                                 nonUploadedFiles.Add(copyFileDestination);
-                                stringOutput.AppendLine($"{Program.Translations.Copied}: " + compiledFiles[i]);
+                                stringOutput.AppendLine($"{Program.Translations.GetLanguage("Copied")}: " + compiledFiles[i]);
                                 ++copyCount;
                                 if (c.DeleteAfterCopy)
                                 {
                                     File.Delete(compiledFiles[i]);
-                                    stringOutput.AppendLine($"{Program.Translations.Deleted}: " + compiledFiles[i]);
+                                    stringOutput.AppendLine($"{Program.Translations.GetLanguage("Deleted")}: " + compiledFiles[i]);
                                 }
                             }
                         }
                         catch (Exception)
                         {
-                            stringOutput.AppendLine($"{Program.Translations.FailCopy}: " + compiledFiles[i]);
+                            stringOutput.AppendLine($"{Program.Translations.GetLanguage("FailCopy")}: " + compiledFiles[i]);
                         }
                     }
                     if (copyCount == 0)
                     {
-                        stringOutput.AppendLine(Program.Translations.NoFilesCopy);
+                        stringOutput.AppendLine(Program.Translations.GetLanguage("NoFilesCopy"));
                     }
                     if (OvertakeOutString)
                     {
@@ -300,22 +293,22 @@ namespace Spedit.UI
 						try
 						{
 							ftp.upload(uploadDir, nonUploadedFiles[i]);
-							stringOutput.AppendLine($"{Program.Translations.Uploaded}: " + nonUploadedFiles[i]);
+							stringOutput.AppendLine($"{Program.Translations.GetLanguage("Uploaded")}: " + nonUploadedFiles[i]);
 						}
 						catch (Exception e)
 						{
-							stringOutput.AppendLine(string.Format(Program.Translations.ErrorUploadFile, nonUploadedFiles[i], uploadDir));
-                            stringOutput.AppendLine($"{Program.Translations.Details}: " + e.Message);
+							stringOutput.AppendLine(string.Format(Program.Translations.GetLanguage("ErrorUploadFile"), nonUploadedFiles[i], uploadDir));
+                            stringOutput.AppendLine($"{Program.Translations.GetLanguage("Details")}: " + e.Message);
                         }
                     }
                 }
             }
             catch (Exception e)
             {
-                stringOutput.AppendLine(Program.Translations.ErrorUpload);
-                stringOutput.AppendLine($"{Program.Translations.Details}: " + e.Message);
+                stringOutput.AppendLine(Program.Translations.GetLanguage("ErrorUpload"));
+                stringOutput.AppendLine($"{Program.Translations.GetLanguage("Details")}: " + e.Message);
             }
-            stringOutput.AppendLine(Program.Translations.Done);
+            stringOutput.AppendLine(Program.Translations.GetLanguage("Done"));
             CompileOutput.Text = stringOutput.ToString();
             if (CompileOutputRow.Height.Value < 11.0)
             {

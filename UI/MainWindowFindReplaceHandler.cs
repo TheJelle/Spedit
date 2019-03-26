@@ -172,7 +172,7 @@ namespace Spedit.UI
                             var location = editors[index].editor.Document.GetLocation(m.Index + addToOffset);
                             editors[index].editor.ScrollTo(location.Line, location.Column);
 							//FindResultBlock.Text = "Found in offset " + (m.Index + addToOffset).ToString() + " with length " + m.Length.ToString();
-							FindResultBlock.Text = string.Format(Program.Translations.FoundInOff, m.Index + addToOffset, m.Length);
+							FindResultBlock.Text = string.Format(Program.Translations.GetLanguage("FoundInOff"), m.Index + addToOffset, m.Length);
                             break;
                         }
                     }
@@ -180,7 +180,7 @@ namespace Spedit.UI
             }
             if (!foundOccurence)
             {
-                FindResultBlock.Text = Program.Translations.FoundNothing;
+                FindResultBlock.Text = Program.Translations.GetLanguage("FoundNothing");
             }
         }
 
@@ -238,7 +238,7 @@ namespace Spedit.UI
                             editors[index].editor.Select(m.Index + addToOffset, result.Length);
                             var location = editors[index].editor.Document.GetLocation(m.Index + addToOffset);
                             editors[index].editor.ScrollTo(location.Line, location.Column);
-                            FindResultBlock.Text = string.Format(Program.Translations.ReplacedOff, MinHeight + addToOffset);
+                            FindResultBlock.Text = string.Format(Program.Translations.GetLanguage("ReplacedOff"), MinHeight + addToOffset);
                             break;
                         }
                     }
@@ -246,7 +246,7 @@ namespace Spedit.UI
             }
             if (!foundOccurence)
             {
-                FindResultBlock.Text = Program.Translations.FoundNothing;
+                FindResultBlock.Text = Program.Translations.GetLanguage("FoundNothing");
             }
         }
 
@@ -280,7 +280,7 @@ namespace Spedit.UI
                 }
             }
 			//FindResultBlock.Text = "Replaced " + count.ToString() + " occurences in " + fileCount.ToString() + " documents";
-			FindResultBlock.Text = string.Format(Program.Translations.ReplacedOcc, count, fileCount);
+			FindResultBlock.Text = string.Format(Program.Translations.GetLanguage("ReplacedOcc, count, fileCount"));
         }
 
         private void Count()
@@ -298,7 +298,7 @@ namespace Spedit.UI
                 MatchCollection mc = regex.Matches(editors[i].editor.Text);
                 count += mc.Count;
             }
-            FindResultBlock.Text = count.ToString() + Program.Translations.OccFound;
+            FindResultBlock.Text = count.ToString() + Program.Translations.GetLanguage("OccFound");
         }
 
         private Regex GetSearchRegex()
@@ -306,7 +306,7 @@ namespace Spedit.UI
             string findString = FindBox.Text;
             if (string.IsNullOrEmpty(findString))
             {
-                FindResultBlock.Text = Program.Translations.EmptyPatt;
+                FindResultBlock.Text = Program.Translations.GetLanguage("EmptyPatt");
                 return null;
             }
             Regex regex;
@@ -337,7 +337,7 @@ namespace Spedit.UI
                 {
                     regex = new Regex(findString, regexOptions);
                 }
-                catch (Exception) { FindResultBlock.Text = Program.Translations.NoValidRegex; return null; }
+                catch (Exception) { FindResultBlock.Text = Program.Translations.GetLanguage("NoValidRegex"); return null; }
             }
             return regex;
         }

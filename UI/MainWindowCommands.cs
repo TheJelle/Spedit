@@ -49,7 +49,7 @@ namespace Spedit.UI
 
         private void Command_Open()
         {
-            OpenFileDialog ofd = new OpenFileDialog() { AddExtension = true, CheckFileExists = true, CheckPathExists = true, Filter = @"Sourcepawn Files (*.sp *.inc)|*.sp;*.inc|Sourcemod Plugins (*.smx)|*.smx|All Files (*.*)|*.*", Multiselect = true, Title = Program.Translations.OpenNewFile };
+            OpenFileDialog ofd = new OpenFileDialog() { AddExtension = true, CheckFileExists = true, CheckPathExists = true, Filter = @"Sourcepawn Files (*.sp *.inc)|*.sp;*.inc|Sourcemod Plugins (*.smx)|*.smx|All Files (*.*)|*.*", Multiselect = true, Title = Program.Translations.GetLanguage("OpenNewFile") };
             var result = ofd.ShowDialog(this);
             if (result.Value)
             {
@@ -63,7 +63,7 @@ namespace Spedit.UI
                     if (!AnyFileLoaded)
                     {
                         this.MetroDialogOptions.ColorScheme = MetroDialogColorScheme.Theme;
-                        this.ShowMessageAsync(Program.Translations.NoFileOpened, Program.Translations.NoFileOpenedCap, MessageDialogStyle.Affirmative, this.MetroDialogOptions);
+                        this.ShowMessageAsync(Program.Translations.GetLanguage("NoFileOpened"), Program.Translations.GetLanguage("NoFileOpenedCap"), MessageDialogStyle.Affirmative, this.MetroDialogOptions);
                     }
                 }
             }
@@ -85,7 +85,7 @@ namespace Spedit.UI
             EditorElement ee = GetCurrentEditorElement();
             if (ee != null)
             {
-                SaveFileDialog sfd = new SaveFileDialog() { AddExtension = true, Filter = @"Sourcepawn Files (*.sp *.inc)|*.sp;*.inc|All Files (*.*)|*.*", OverwritePrompt = true, Title = Program.Translations.SaveFileAs };
+                SaveFileDialog sfd = new SaveFileDialog() { AddExtension = true, Filter = @"Sourcepawn Files (*.sp *.inc)|*.sp;*.inc|All Files (*.*)|*.*", OverwritePrompt = true, Title = Program.Translations.GetLanguage("SaveFileAs") };
                 sfd.FileName = ee.Parent.Title.Trim(new char[] { '*' });
                 var result = sfd.ShowDialog(this);
                 if (result.Value)
@@ -151,7 +151,7 @@ namespace Spedit.UI
                         else
                         { str.AppendLine(editors[i].Parent.Title.Trim(new char[] { '*' })); }
                     }
-                    var Result = await this.ShowMessageAsync(Program.Translations.SaveFollow, str.ToString(), MessageDialogStyle.AffirmativeAndNegative, this.MetroDialogOptions);
+                    var Result = await this.ShowMessageAsync(Program.Translations.GetLanguage("SaveFollow"), str.ToString(), MessageDialogStyle.AffirmativeAndNegative, this.MetroDialogOptions);
                     if (Result == MessageDialogResult.Affirmative)
                     {
                         ForceSave = true;
@@ -286,7 +286,7 @@ namespace Spedit.UI
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Sourcepawn Plugins (*.smx)|*.smx";
-            ofd.Title = Program.Translations.ChDecomp;
+            ofd.Title = Program.Translations.GetLanguage("ChDecomp");
             var result = ofd.ShowDialog();
             if (result.Value)
             {
@@ -298,7 +298,7 @@ namespace Spedit.UI
                         ProgressDialogController task = null;
                         if (win != null)
                         {
-                            task = await this.ShowProgressAsync(Program.Translations.Decompiling, fInfo.FullName, false, this.MetroDialogOptions);
+                            task = await this.ShowProgressAsync(Program.Translations.GetLanguage("Decompiling"), fInfo.FullName, false, this.MetroDialogOptions);
                             MainWindow.ProcessUITasks();
                         }
                         string destFile = fInfo.FullName + ".sp";

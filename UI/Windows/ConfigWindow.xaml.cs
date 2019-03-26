@@ -86,7 +86,7 @@ namespace Spedit.UI.Windows
             List<Config> configList = new List<Config>(Program.Configs);
             configList.Add(c);
             Program.Configs = configList.ToArray();
-            ConfigListBox.Items.Add(new ListBoxItem() { Content = Program.Translations.NewConfig });
+            ConfigListBox.Items.Add(new ListBoxItem() { Content = Program.Translations.GetLanguage("NewConfig")});
         }
 
         private void DeleteButton_Clicked(object sender, RoutedEventArgs e)
@@ -95,7 +95,7 @@ namespace Spedit.UI.Windows
             Config c = Program.Configs[index];
             if (c.Standard)
             {
-                this.ShowMessageAsync(Program.Translations.CannotDelConf, Program.Translations.YCannotDelConf, MessageDialogStyle.Affirmative, this.MetroDialogOptions);
+                this.ShowMessageAsync(Program.Translations.GetLanguage("CannotDelConf"), Program.Translations.GetLanguage("YCannotDelConf"), MessageDialogStyle.Affirmative, this.MetroDialogOptions);
                 return;
             }
             List<Config> configList = new List<Config>(Program.Configs);
@@ -305,41 +305,41 @@ namespace Spedit.UI.Windows
 			{
 				return;
 			}
-			NewButton.Content = Program.Translations.New;
-			DeleteButton.Content = Program.Translations.Delete;
-			NameBlock.Text = Program.Translations.Name;
-			ScriptingDirBlock.Text = Program.Translations.ScriptDir;
-			DelimitWiBlock.Text = $"({Program.Translations.DelimiedWi} ; )";
-			CopyDirBlock.Text = Program.Translations.CopyDir;
-			ServerExeBlock.Text = Program.Translations.ServerExe;
-			ServerStartArgBlock.Text = Program.Translations.serverStartArgs;
-			PreBuildBlock.Text = Program.Translations.PreBuildCom;
-			PostBuildBlock.Text = Program.Translations.PostBuildCom;
-			OptimizeBlock.Text = Program.Translations.OptimizeLvl;
-			VerboseBlock.Text = Program.Translations.VerboseLvl;
-			C_AutoCopy.Content = Program.Translations.AutoCopy;
-			C_DeleteAfterCopy.Content = Program.Translations.DeleteOldSMX;
-			FTPHostBlock.Text = Program.Translations.FTPHost;
-			FTPUserBlock.Text = Program.Translations.FTPUser;
-			FTPPWBlock.Text = Program.Translations.FTPPw;
-			FTPDirBlock.Text = Program.Translations.FTPDir;
-			CMD_ItemC.Text = Program.Translations.CMDLineCom;
-			ItemC_EditorDir.Content = "{editordir} - " + Program.Translations.ComEditorDir;
-			ItemC_ScriptDir.Content = "{scriptdir} - " + Program.Translations.ComScriptDir;
-			ItemC_CopyDir.Content = "{copydir} - " + Program.Translations.ComCopyDir;
-			ItemC_ScriptFile.Content = "{scriptfile} - " + Program.Translations.ComScriptFile;
-			ItemC_ScriptName.Content = "{scriptname} - " + Program.Translations.ComScriptName;
-			ItemC_PluginFile.Content = "{pluginfile} - " + Program.Translations.ComPluginFile;
-			ItemC_PluginName.Content = "{pluginname} - " + Program.Translations.ComPluginName;
-			RConEngineBlock.Text = Program.Translations.RConEngine;
-			RConIPBlock.Text = Program.Translations.RConIP;
-			RConPortBlock.Text = Program.Translations.RconPort;
-			RConPWBlock.Text = Program.Translations.RconPw;
-			RConComBlock.Text = Program.Translations.RconCom;
-			Rcon_MenuC.Text = Program.Translations.RConCMDLineCom;
-			MenuC_PluginsReload.Content = "{plugins_reload} - " + Program.Translations.ComPluginsReload;
-			MenuC_PluginsLoad.Content = "{plugins_load} - " + Program.Translations.ComPluginsLoad;
-			MenuC_PluginsUnload.Content = "{plugins_unload} - " + Program.Translations.ComPluginsUnload;
+			NewButton.Content = Program.Translations.GetLanguage("New");
+			DeleteButton.Content = Program.Translations.GetLanguage("Delete");
+			NameBlock.Text = Program.Translations.GetLanguage("Name");
+			ScriptingDirBlock.Text = Program.Translations.GetLanguage("ScriptDir");
+			DelimitWiBlock.Text = $"({Program.Translations.GetLanguage("DelimiedWi")}";
+			CopyDirBlock.Text = Program.Translations.GetLanguage("CopyDir");
+			ServerExeBlock.Text = Program.Translations.GetLanguage("ServerExe");
+			ServerStartArgBlock.Text = Program.Translations.GetLanguage("serverStartArgs");
+			PreBuildBlock.Text = Program.Translations.GetLanguage("PreBuildCom");
+			PostBuildBlock.Text = Program.Translations.GetLanguage("PostBuildCom");
+			OptimizeBlock.Text = Program.Translations.GetLanguage("OptimizeLvl");
+			VerboseBlock.Text = Program.Translations.GetLanguage("VerboseLvl");
+			C_AutoCopy.Content = Program.Translations.GetLanguage("AutoCopy");
+			C_DeleteAfterCopy.Content = Program.Translations.GetLanguage("DeleteOldSMX");
+			FTPHostBlock.Text = Program.Translations.GetLanguage("FTPHost");
+			FTPUserBlock.Text = Program.Translations.GetLanguage("FTPUser");
+			FTPPWBlock.Text = Program.Translations.GetLanguage("FTPPw");
+			FTPDirBlock.Text = Program.Translations.GetLanguage("FTPDir");
+			CMD_ItemC.Text = Program.Translations.GetLanguage("CMDLineCom");
+			ItemC_EditorDir.Content = "{editordir} - " + Program.Translations.GetLanguage("ComEditorDir");
+			ItemC_ScriptDir.Content = "{scriptdir} - " + Program.Translations.GetLanguage("ComScriptDir");
+			ItemC_CopyDir.Content = "{copydir} - " + Program.Translations.GetLanguage("ComCopyDir");
+			ItemC_ScriptFile.Content = "{scriptfile} - " + Program.Translations.GetLanguage("ComScriptFile");
+			ItemC_ScriptName.Content = "{scriptname} - " + Program.Translations.GetLanguage("ComScriptName");
+			ItemC_PluginFile.Content = "{pluginfile} - " + Program.Translations.GetLanguage("ComPluginFile");
+			ItemC_PluginName.Content = "{pluginname} - " + Program.Translations.GetLanguage("ComPluginName");
+			RConEngineBlock.Text = Program.Translations.GetLanguage("RConEngine");
+			RConIPBlock.Text = Program.Translations.GetLanguage("RConIP");
+			RConPortBlock.Text = Program.Translations.GetLanguage("RconPort");
+			RConPWBlock.Text = Program.Translations.GetLanguage("RconPw");
+			RConComBlock.Text = Program.Translations.GetLanguage("RconCom");
+			Rcon_MenuC.Text = Program.Translations.GetLanguage("RConCMDLineCom");
+			MenuC_PluginsReload.Content = "{plugins_reload} - " + Program.Translations.GetLanguage("ComPluginsReload");
+			MenuC_PluginsLoad.Content = "{plugins_load} - " + Program.Translations.GetLanguage("ComPluginsLoad");
+			MenuC_PluginsUnload.Content = "{plugins_unload} - " + Program.Translations.GetLanguage("ComPluginsUnload");
 		}
 
 		private ICommand textBoxButtonFolderCmd;
@@ -400,7 +400,7 @@ namespace Spedit.UI.Windows
                             dialog.Filter = "Executables *.exe|*.exe|All Files *.*|*.*";
                             dialog.Multiselect = false;
                             dialog.CheckFileExists = true; dialog.CheckPathExists = true;
-                            dialog.Title = Program.Translations.SelectExe;
+                            dialog.Title = Program.Translations.GetLanguage("SelectExe");
                             var result = dialog.ShowDialog();
                             if (result.Value)
                             {
