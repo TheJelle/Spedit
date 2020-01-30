@@ -1,13 +1,13 @@
 <Templates>
-	<Template Name="Sourcepawn Script" NewName="New Sourcepawn Script.sp" File="ScriptTemplate.sp" />
-	<Template Name="Empty Sourcepawn Script" NewName="New Script.sp" File="EmptyScriptTemplate.sp" />
+	<Template Name="Generic Script" NewName="New Generic Script.sp" File="Template_Generic.sp" />
+	<Template Name="TF2 Script" NewName="New TF2 Script.sp" File="Template_TF2.sp" />
+	<Template Name="CSS Script" NewName="New CSS Script.sp" File="Template_CSS.sp" />
+	<Template Name="CSGO Script" NewName="New CSGO Script.sp" File="Template_CSGO.sp" />
+	<Template Name="Generic Script (1.6 Syntax)" NewName="New Generic Old Syntax Script.sp" File="OldSyntaxTemplate_Generic.sp" />
+	<Template Name="TF2 Script (1.6 Syntax)" NewName="New TF2 Old Syntax Script.sp" File="OldSyntaxTemplate_TF2.sp" />
+	<Template Name="CSS Script (1.6 Syntax)" NewName="New CSS Old Syntax Script.sp" File="OldSyntaxTemplate_CSS.sp" />
+	<Template Name="CSGO Script (1.6 Syntax)" NewName="New CSGO Old Syntax Script.sp" File="OldSyntaxTemplate_CSGO.sp" />
 	<Template Name="Include" NewName="New Include.inc" File="IncludeTemplate.inc" />
 	<Template Name="Extension Include" NewName="New Extension Include.inc" File="ExtensionIncludeTemplate.inc" />
 	<Template Name="Interoperability Include" NewName="New Plugin Include.inc" File="NativeIncludeTemplate.inc" />
-	<Template Name="CS:S / CS:GO Script" NewName="New CS Sourcepawn Script.sp" File="CSSCSGOTemplate.sp" />
-	<Template Name="TF Script" NewName="New TF Sourcepawn Script.sp" File="TFTemplate.sp" />
-	<Template Name="Simple Sourcepawn Script" NewName="New Script.sp" File="SimpleScriptTemplate.sp" />
-	<Template Name="Sourcepawn Script (SM 1.6 Syntax)" NewName="New Sourcepawn Script.sp" File="OldSyntaxScriptTemplate.sp" />
-	<Template Name="CS:S / CS:GO Script (SM 1.6 Syntax)" NewName="New CS Sourcepawn Script.sp" File="OldSyntaxCSSCSGOTemplate.sp" />
-	<Template Name="TF Script (SM 1.6 Syntax)" NewName="New TF Sourcepawn Script.sp" File="OldSyntaxTFTemplate.sp" />
 </Templates>
