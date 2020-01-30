@@ -64,7 +64,6 @@
     <None Include="Deploy\DotNetChecker.nsh" />
     <None Include="Deploy\FileAssociation.nsh" />
     <None Include="Deploy\SPEdit.nsi" />
-    <None Include="packages.config" />
     <None Include="Resources\Misc\Templates\CSSCSGOTemplate.sp" />
     <None Include="Resources\Misc\Templates\EmptyScriptTemplate.sp" />
     <None Include="Resources\Misc\Templates\OldSyntaxCSSCSGOTemplate.sp" />
@@ -75,15 +74,6 @@
     <None Include="Resources\Misc\Templates\TFTemplate.sp" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
-      <HintPath>packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
-    </Reference>
-    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MahApps.Metro.1.6.5\lib\net45\MahApps.Metro.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="QueryMaster">
@@ -648,6 +638,20 @@
   <ItemGroup>
     <Content Include="Resources\lang_0_spedit.xml" />
     <Content Include="Resources\lang_0_spedit_entryTemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit">
+      <Version>6.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Extended.Wpf.Toolkit">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="MahApps.Metro">
+      <Version>1.6.5</Version>
+    </PackageReference>
+    <PackageReference Include="SSH.NET">
+      <Version>2016.1.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

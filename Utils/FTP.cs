@@ -1,59 +1,46 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
 using System.Text;
+using Renci.SshNet;
 
 namespace Spedit.Utils
 {
     public class FTP
     {
-        private string host = null;
-        private string user = null;
-        private string pass = null;
-        private FtpWebRequest ftpRequest = null;
-        private Stream ftpStream = null;
-        private int bufferSize = 2048;
+        private readonly string _host;
+        private readonly string _user;
+        private readonly string _pass;
 
-        public FTP(string hostIP, string userName, string password) { host = hostIP; user = userName; pass = password; }
+        public FTP(string host, string user, string password) { _host = host; _user = user; _pass = password; }
 
-        //thanks to: http://www.codeproject.com/Tips/443588/Simple-Csharp-FTP-Class
-        public void upload(string remoteFile, string localFile)
+        public void Upload(string remoteFile, string localFile)
         {
-			StringBuilder requestUri = new StringBuilder(host);
-			if (host[host.Length - 1] == '/')
-			{
-				if (remoteFile[0] == '/')
-				{ requestUri.Append(remoteFile.Substring(1)); }
-				else
-				{ requestUri.Append(remoteFile); }
-			}
-			else
-			{
-				if (remoteFile[0] == '/')
-				{ requestUri.Append(remoteFile); }
-				else
-				{
-					requestUri.Append("/");
-					requestUri.Append(remoteFile);
-				}
-			}
-            ftpRequest = (FtpWebRequest)FtpWebRequest.Create(requestUri.ToString());
-            ftpRequest.Credentials = new NetworkCredential(user, pass);
-            ftpRequest.UseBinary = true;
-            ftpRequest.UsePassive = true;
-            ftpRequest.KeepAlive = true;
-            ftpRequest.Method = WebRequestMethods.Ftp.UploadFile;
-            ftpStream = ftpRequest.GetRequestStream();
-            FileStream localFileStream = new FileStream(localFile, FileMode.Open);
-            byte[] byteBuffer = new byte[bufferSize];
-            int bytesSent = localFileStream.Read(byteBuffer, 0, bufferSize);
-            while (bytesSent != 0)
+            var requestUri = new UriBuilder(_host) { Path = remoteFile }.Uri;
+
+            if (requestUri.Scheme == "sftp")
             {
-                ftpStream.Write(byteBuffer, 0, bytesSent);
-                bytesSent = localFileStream.Read(byteBuffer, 0, bufferSize);
+                var connectionInfo = new ConnectionInfo(requestUri.Host, requestUri.Port == -1 ? 22 : requestUri.Port, _user, new PasswordAuthenticationMethod(_user, _pass));
+                using (var sftp = new SftpClient(connectionInfo))
+                {
+                    sftp.Connect();
+
+                    using (var stream = File.OpenRead(localFile))
+                    {
+                        sftp.UploadFile(stream, remoteFile, true);
+                    }
+
+                    sftp.Disconnect();
+                }
             }
-            localFileStream.Close();
-            ftpStream.Close();
-            ftpRequest = null;
+            else
+            {
+                using (var client = new WebClient())
+                {
+                    client.Credentials = new NetworkCredential(_user, _pass);
+                    client.UploadFile(requestUri, WebRequestMethods.Ftp.UploadFile, localFile);
+                }
+            }
         }
-    } 
+    }
 }

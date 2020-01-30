@@ -299,7 +299,7 @@ namespace Spedit.UI
                         }
 						try
 						{
-							ftp.upload(uploadDir, nonUploadedFiles[i]);
+							ftp.Upload(uploadDir, nonUploadedFiles[i]);
 							stringOutput.AppendLine($"{Program.Translations.Uploaded}: " + nonUploadedFiles[i]);
 						}
 						catch (Exception e)
